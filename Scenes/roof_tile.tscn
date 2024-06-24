@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cy10qmtoc138j"]
+
+[ext_resource type="PackedScene" uid="uid://bsjcivr8n2i0x" path="res://Scenes/ground_tile.tscn" id="1_s3hao"]
+
+[node name="GroundTile" instance=ExtResource("1_s3hao")]
+
+[node name="Sprite" parent="." index="0"]
+flip_v = true
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 6)

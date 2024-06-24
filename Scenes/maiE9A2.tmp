@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqa4iv1hw7etx"]
+
+[ext_resource type="Script" path="res://Scripts/gameManager.gd" id="1_b5ubd"]
+[ext_resource type="Texture2D" uid="uid://cxqp0xj8kr0ub" path="res://Sprites/Temps/crab_temp.png" id="1_ce356"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_qdwve"]
+[ext_resource type="Script" path="res://Scripts/mapManager.gd" id="4_mlssy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_phk17"]
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_b5ubd")
+
+[node name="Crab" type="Area2D" parent="."]
+position = Vector2(50, 90)
+script = ExtResource("1_qdwve")
+
+[node name="CrabSprite" type="Sprite2D" parent="Crab"]
+texture = ExtResource("1_ce356")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crab"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_phk17")
+
+[node name="AudioStream" type="AudioStreamPlayer2D" parent="Crab"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(160, 90)
+
+[node name="Map" type="Node" parent="."]
+script = ExtResource("4_mlssy")
+
+[node name="Debug" type="Label" parent="."]
+z_index = 1
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="jumped" from="." to="Crab" method="jump"]
+[connection signal="area_entered" from="Crab" to="Crab" method="_on_body_entered"]
+[connection signal="area_exited" from="Crab" to="Crab" method="_on_body_exited"]
+[connection signal="score_points" from="Crab" to="." method="_score"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsjcivr8n2i0x"]
+
+[ext_resource type="Script" path="res://Scripts/GameObjects/groundTile.gd" id="1_1l2sa"]
+[ext_resource type="Texture2D" uid="uid://d2lwtnma7tcwy" path="res://Sprites/ground.png" id="2_qhp1y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvyst"]
+size = Vector2(20, 5)
+
+[node name="GroundTile" type="Area2D"]
+script = ExtResource("1_1l2sa")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_qhp1y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yvyst")

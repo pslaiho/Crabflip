@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://dam6oph2rkjwj"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_7gxud"]
+[ext_resource type="Texture2D" uid="uid://cxqp0xj8kr0ub" path="res://Sprites/Temps/crab_temp.png" id="2_opxsh"]
+[ext_resource type="Texture2D" uid="uid://dgixf1pbq4pq7" path="res://Sprites/crab.png" id="3_fhc7e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_phk17"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6pea"]
+atlas = ExtResource("3_fhc7e")
+region = Rect2(120, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_diagk"]
+atlas = ExtResource("3_fhc7e")
+region = Rect2(0, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga4qg"]
+atlas = ExtResource("3_fhc7e")
+region = Rect2(20, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64kwb"]
+atlas = ExtResource("3_fhc7e")
+region = Rect2(40, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6rdx"]
+atlas = ExtResource("3_fhc7e")
+region = Rect2(60, 0, 20, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oe151"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6pea")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_diagk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga4qg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64kwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6rdx")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
+
+[node name="Crab" type="Area2D"]
+z_index = 4
+position = Vector2(50, 158)
+script = ExtResource("1_7gxud")
+
+[node name="CrabSprite" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_opxsh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_phk17")
+
+[node name="AudioStream" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+
+[node name="CrabAnimation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_oe151")
+animation = &"run"
+
+[connection signal="area_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_exited" from="." to="." method="_on_body_exited"]

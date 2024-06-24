@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=3 uid="uid://dqa4iv1hw7etx"]
+
+[ext_resource type="Script" path="res://Scripts/gameManager.gd" id="1_b5ubd"]
+[ext_resource type="PackedScene" uid="uid://dam6oph2rkjwj" path="res://Scenes/crab.tscn" id="4_d8nil"]
+[ext_resource type="Script" path="res://Scripts/mapManager.gd" id="4_mlssy"]
+[ext_resource type="Texture2D" uid="uid://ory5vnget06l" path="res://Sprites/bg1.png" id="5_24nvi"]
+[ext_resource type="Script" path="res://Scripts/pauseMenu.gd" id="5_b2p4o"]
+[ext_resource type="Script" path="res://Scripts/GameObjects/background.gd" id="6_aupan"]
+[ext_resource type="PackedScene" uid="uid://bee6etxomfl06" path="res://Scenes/bounds.tscn" id="6_dlv8m"]
+[ext_resource type="FontFile" uid="uid://dl3ic050o4ccq" path="res://Fonts/Cave-Story.ttf" id="7_gsant"]
+[ext_resource type="Texture2D" uid="uid://d08p8hcahh0a7" path="res://Sprites/bg2.png" id="7_sxas0"]
+[ext_resource type="Script" path="res://Scripts/continueText.gd" id="8_gx1ii"]
+[ext_resource type="Texture2D" uid="uid://c0qrdik2i4441" path="res://Sprites/bg3.png" id="8_hlq0y"]
+[ext_resource type="Script" path="res://Scripts/scoreText.gd" id="9_6rdso"]
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_b5ubd")
+
+[node name="Crab" parent="." instance=ExtResource("4_d8nil")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(160, 90)
+
+[node name="Map" type="Node" parent="."]
+script = ExtResource("4_mlssy")
+
+[node name="Backgrounds" type="Node" parent="Map"]
+
+[node name="BottomBG0" type="Sprite2D" parent="Map/Backgrounds"]
+z_index = -1
+position = Vector2(160, 90)
+texture = ExtResource("5_24nvi")
+offset = Vector2(0, 45)
+script = ExtResource("6_aupan")
+
+[node name="BottomBG1" type="Sprite2D" parent="Map/Backgrounds"]
+z_index = -1
+position = Vector2(478, 90)
+texture = ExtResource("7_sxas0")
+offset = Vector2(0, 45)
+script = ExtResource("6_aupan")
+
+[node name="BottomBG2" type="Sprite2D" parent="Map/Backgrounds"]
+z_index = -1
+position = Vector2(796, 90)
+texture = ExtResource("8_hlq0y")
+offset = Vector2(0, 45)
+script = ExtResource("6_aupan")
+
+[node name="TopBG0" type="Sprite2D" parent="Map/Backgrounds"]
+z_index = -1
+position = Vector2(160, 0)
+texture = ExtResource("8_hlq0y")
+offset = Vector2(0, 45)
+flip_v = true
+script = ExtResource("6_aupan")
+
+[node name="TopBG1" type="Sprite2D" parent="Map/Backgrounds"]
+z_index = -1
+position = Vector2(478, 0)
+texture = ExtResource("7_sxas0")
+offset = Vector2(0, 45)
+flip_v = true
+script = ExtResource("6_aupan")
+
+[node name="TopBG2" type="Sprite2D" parent="Map/Backgrounds"]
+z_index = -1
+position = Vector2(796, 0)
+texture = ExtResource("5_24nvi")
+offset = Vector2(0, 45)
+flip_v = true
+script = ExtResource("6_aupan")
+
+[node name="Bounds" parent="Map" instance=ExtResource("6_dlv8m")]
+
+[node name="Debug" type="Label" parent="."]
+z_index = 5
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PauseMenu" type="Node" parent="."]
+process_mode = 2
+script = ExtResource("5_b2p4o")
+
+[node name="ContinueText" type="Label" parent="PauseMenu"]
+offset_left = 50.0
+offset_top = 60.0
+offset_right = 270.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("7_gsant")
+theme_override_font_sizes/font_size = 32
+text = "Press to Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("8_gx1ii")
+
+[node name="ScoreText" type="Label" parent="."]
+z_index = 5
+offset_left = 140.0
+offset_top = 23.0
+offset_right = 180.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("7_gsant")
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("9_6rdso")
+
+[connection signal="ended" from="." to="PauseMenu" method="ended"]
+[connection signal="jumped" from="." to="Crab" method="jump"]
+[connection signal="scored" from="." to="ScoreText" method="update_score"]
+[connection signal="game_ended" from="Crab" to="." method="_game_ended"]
+[connection signal="score_points" from="Crab" to="." method="_score"]
+[connection signal="paused" from="PauseMenu" to="PauseMenu/ContinueText" method="set_visibility"]

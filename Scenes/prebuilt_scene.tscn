@@ -1,0 +1,1411 @@
+[gd_scene load_steps=17 format=3 uid="uid://cjvuoga6g7jgo"]
+
+[ext_resource type="Script" path="res://Scripts/gameManager.gd" id="1_3yn8u"]
+[ext_resource type="PackedScene" uid="uid://dam6oph2rkjwj" path="res://Scenes/crab.tscn" id="2_12ouf"]
+[ext_resource type="PackedScene" uid="uid://cy10qmtoc138j" path="res://Scenes/roof_tile.tscn" id="4_30452"]
+[ext_resource type="Script" path="res://Scripts/pauseMenu.gd" id="5_g6sbg"]
+[ext_resource type="PackedScene" uid="uid://l1a0rva5cbhq" path="res://Scenes/barrel.tscn" id="6_ob5lg"]
+[ext_resource type="PackedScene" uid="uid://bsjcivr8n2i0x" path="res://Scenes/ground_tile.tscn" id="6_vqmxw"]
+[ext_resource type="PackedScene" uid="uid://bee6etxomfl06" path="res://Scenes/bounds.tscn" id="7_fbhbr"]
+[ext_resource type="PackedScene" uid="uid://t5t34uhkc6hi" path="res://Scenes/seashell.tscn" id="7_xuo3u"]
+[ext_resource type="PackedScene" uid="uid://te8acn4f6as0" path="res://Scenes/star.tscn" id="9_w682m"]
+[ext_resource type="Texture2D" uid="uid://ory5vnget06l" path="res://Sprites/bg1.png" id="9_ygiyw"]
+[ext_resource type="Script" path="res://Scripts/GameObjects/background.gd" id="10_6k5pi"]
+[ext_resource type="FontFile" uid="uid://dl3ic050o4ccq" path="res://Fonts/Cave-Story.ttf" id="10_mhtsq"]
+[ext_resource type="Script" path="res://Scripts/scoreText.gd" id="11_51350"]
+[ext_resource type="Script" path="res://Scripts/continueText.gd" id="11_c1f0h"]
+[ext_resource type="Texture2D" uid="uid://d08p8hcahh0a7" path="res://Sprites/bg2.png" id="11_jcvei"]
+[ext_resource type="Texture2D" uid="uid://c0qrdik2i4441" path="res://Sprites/bg3.png" id="12_f2qjs"]
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_3yn8u")
+
+[node name="Crab" parent="." instance=ExtResource("2_12ouf")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(160, 90)
+
+[node name="Map" type="Node" parent="."]
+
+[node name="Grounds" type="Node" parent="Map"]
+
+[node name="GroundTile" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(8, 172)
+
+[node name="GroundTile2" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(24, 172)
+
+[node name="GroundTile3" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(40, 172)
+
+[node name="GroundTile4" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(56, 172)
+
+[node name="GroundTile5" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(72, 172)
+
+[node name="GroundTile6" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(88, 172)
+
+[node name="GroundTile7" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(104, 172)
+
+[node name="GroundTile8" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(120, 172)
+
+[node name="GroundTile9" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(136, 172)
+
+[node name="GroundTile10" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(152, 172)
+
+[node name="GroundTile11" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(168, 172)
+
+[node name="GroundTile12" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(184, 172)
+
+[node name="GroundTile13" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(200, 172)
+
+[node name="GroundTile14" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(216, 172)
+
+[node name="GroundTile15" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(232, 172)
+
+[node name="GroundTile16" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(248, 172)
+
+[node name="GroundTile17" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(264, 172)
+
+[node name="GroundTile18" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(280, 172)
+
+[node name="GroundTile19" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(296, 172)
+
+[node name="GroundTile20" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(312, 172)
+
+[node name="GroundTile21" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(328, 172)
+
+[node name="GroundTile22" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(344, 172)
+
+[node name="GroundTile23" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(360, 172)
+
+[node name="GroundTile24" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(376, 172)
+
+[node name="GroundTile25" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(392, 172)
+
+[node name="GroundTile26" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(408, 172)
+
+[node name="GroundTile27" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(424, 172)
+
+[node name="GroundTile28" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(440, 172)
+
+[node name="GroundTile29" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(456, 172)
+
+[node name="GroundTile30" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(472, 172)
+
+[node name="GroundTile31" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(488, 172)
+
+[node name="GroundTile32" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(504, 172)
+
+[node name="GroundTile33" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(520, 172)
+
+[node name="GroundTile34" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(536, 172)
+
+[node name="GroundTile35" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(552, 172)
+
+[node name="GroundTile36" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(568, 172)
+
+[node name="GroundTile37" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(584, 172)
+
+[node name="GroundTile38" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(600, 172)
+
+[node name="GroundTile39" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(616, 172)
+
+[node name="GroundTile40" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(632, 172)
+
+[node name="GroundTile41" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(968, 172)
+
+[node name="GroundTile42" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(984, 172)
+
+[node name="GroundTile43" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1000, 172)
+
+[node name="GroundTile44" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1016, 172)
+
+[node name="GroundTile45" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1032, 172)
+
+[node name="GroundTile46" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1048, 172)
+
+[node name="GroundTile47" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1064, 172)
+
+[node name="GroundTile48" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1080, 172)
+
+[node name="GroundTile49" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1096, 172)
+
+[node name="GroundTile50" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1112, 172)
+
+[node name="GroundTile51" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1128, 172)
+
+[node name="GroundTile52" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1144, 172)
+
+[node name="GroundTile53" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1160, 172)
+
+[node name="GroundTile54" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1176, 172)
+
+[node name="GroundTile55" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1192, 172)
+
+[node name="GroundTile56" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1208, 172)
+
+[node name="GroundTile57" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1224, 172)
+
+[node name="GroundTile58" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1240, 172)
+
+[node name="GroundTile59" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1256, 172)
+
+[node name="GroundTile60" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1272, 172)
+
+[node name="GroundTile61" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1288, 172)
+
+[node name="GroundTile62" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1304, 172)
+
+[node name="GroundTile63" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1320, 172)
+
+[node name="GroundTile64" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1336, 172)
+
+[node name="GroundTile65" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1352, 172)
+
+[node name="GroundTile66" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1368, 172)
+
+[node name="GroundTile67" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1384, 172)
+
+[node name="GroundTile68" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1400, 172)
+
+[node name="GroundTile69" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1416, 172)
+
+[node name="GroundTile70" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1432, 172)
+
+[node name="GroundTile71" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1448, 172)
+
+[node name="GroundTile72" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1464, 172)
+
+[node name="GroundTile73" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1480, 172)
+
+[node name="GroundTile74" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1496, 172)
+
+[node name="GroundTile75" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1512, 172)
+
+[node name="GroundTile76" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1528, 172)
+
+[node name="GroundTile77" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1544, 172)
+
+[node name="GroundTile78" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1560, 172)
+
+[node name="GroundTile79" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1576, 172)
+
+[node name="GroundTile80" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1592, 172)
+
+[node name="GroundTile81" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1672, 172)
+
+[node name="GroundTile82" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1688, 172)
+
+[node name="GroundTile83" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1704, 172)
+
+[node name="GroundTile84" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1720, 172)
+
+[node name="GroundTile85" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1736, 172)
+
+[node name="GroundTile86" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1752, 172)
+
+[node name="GroundTile87" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1768, 172)
+
+[node name="GroundTile88" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1784, 172)
+
+[node name="GroundTile89" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1800, 172)
+
+[node name="GroundTile90" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1816, 172)
+
+[node name="GroundTile91" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1832, 172)
+
+[node name="GroundTile92" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1848, 172)
+
+[node name="GroundTile93" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1864, 172)
+
+[node name="GroundTile94" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1880, 172)
+
+[node name="GroundTile95" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1896, 172)
+
+[node name="GroundTile96" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1912, 172)
+
+[node name="GroundTile97" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1928, 172)
+
+[node name="GroundTile98" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1944, 172)
+
+[node name="GroundTile99" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1960, 172)
+
+[node name="GroundTile100" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1976, 172)
+
+[node name="GroundTile101" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(1992, 172)
+
+[node name="GroundTile102" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2168, 172)
+
+[node name="GroundTile103" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2184, 172)
+
+[node name="GroundTile104" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2200, 172)
+
+[node name="GroundTile105" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2216, 172)
+
+[node name="GroundTile106" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2232, 172)
+
+[node name="GroundTile107" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2248, 172)
+
+[node name="GroundTile108" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2264, 172)
+
+[node name="GroundTile109" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2280, 172)
+
+[node name="GroundTile110" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2296, 172)
+
+[node name="GroundTile111" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2312, 172)
+
+[node name="GroundTile112" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2328, 172)
+
+[node name="GroundTile113" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2344, 172)
+
+[node name="GroundTile114" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2360, 172)
+
+[node name="GroundTile115" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2376, 172)
+
+[node name="GroundTile116" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2392, 172)
+
+[node name="GroundTile117" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2408, 172)
+
+[node name="GroundTile118" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2424, 172)
+
+[node name="GroundTile119" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2440, 172)
+
+[node name="GroundTile120" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2456, 172)
+
+[node name="GroundTile121" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2472, 172)
+
+[node name="GroundTile122" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2488, 172)
+
+[node name="GroundTile123" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2664, 172)
+
+[node name="GroundTile124" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2680, 172)
+
+[node name="GroundTile125" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2696, 172)
+
+[node name="GroundTile126" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2712, 172)
+
+[node name="GroundTile127" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2728, 172)
+
+[node name="GroundTile128" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2744, 172)
+
+[node name="GroundTile129" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2760, 172)
+
+[node name="GroundTile130" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2776, 172)
+
+[node name="GroundTile131" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2792, 172)
+
+[node name="GroundTile132" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2808, 172)
+
+[node name="GroundTile133" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2824, 172)
+
+[node name="GroundTile134" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2840, 172)
+
+[node name="GroundTile135" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2856, 172)
+
+[node name="GroundTile136" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2872, 172)
+
+[node name="GroundTile137" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2888, 172)
+
+[node name="GroundTile138" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2904, 172)
+
+[node name="GroundTile139" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2920, 172)
+
+[node name="GroundTile140" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2936, 172)
+
+[node name="GroundTile141" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2952, 172)
+
+[node name="GroundTile142" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2968, 172)
+
+[node name="GroundTile143" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(2984, 172)
+
+[node name="GroundTile144" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(3000, 172)
+
+[node name="GroundTile145" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(3016, 172)
+
+[node name="GroundTile146" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(3032, 172)
+
+[node name="GroundTile147" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4072, 172)
+
+[node name="GroundTile148" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4088, 172)
+
+[node name="GroundTile149" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4104, 172)
+
+[node name="GroundTile150" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4120, 172)
+
+[node name="GroundTile151" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4136, 172)
+
+[node name="GroundTile152" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4152, 172)
+
+[node name="GroundTile153" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4168, 172)
+
+[node name="GroundTile154" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4184, 172)
+
+[node name="GroundTile155" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4200, 172)
+
+[node name="GroundTile156" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4216, 172)
+
+[node name="GroundTile157" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4232, 172)
+
+[node name="GroundTile158" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4248, 172)
+
+[node name="GroundTile159" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4264, 172)
+
+[node name="GroundTile160" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4280, 172)
+
+[node name="GroundTile161" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4296, 172)
+
+[node name="GroundTile162" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4312, 172)
+
+[node name="GroundTile163" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4328, 172)
+
+[node name="GroundTile164" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4344, 172)
+
+[node name="GroundTile165" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4392, 172)
+
+[node name="GroundTile166" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4408, 172)
+
+[node name="GroundTile167" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4424, 172)
+
+[node name="GroundTile168" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4440, 172)
+
+[node name="GroundTile169" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4456, 172)
+
+[node name="GroundTile170" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4472, 172)
+
+[node name="GroundTile171" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4488, 172)
+
+[node name="GroundTile172" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4504, 172)
+
+[node name="GroundTile173" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4520, 172)
+
+[node name="GroundTile174" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4536, 172)
+
+[node name="GroundTile175" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4552, 172)
+
+[node name="GroundTile176" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4568, 172)
+
+[node name="GroundTile177" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4584, 172)
+
+[node name="GroundTile178" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4600, 172)
+
+[node name="GroundTile179" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4616, 172)
+
+[node name="GroundTile180" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4632, 172)
+
+[node name="GroundTile181" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4648, 172)
+
+[node name="GroundTile182" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4664, 172)
+
+[node name="GroundTile183" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4680, 172)
+
+[node name="GroundTile184" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4696, 172)
+
+[node name="GroundTile185" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4712, 172)
+
+[node name="GroundTile186" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4728, 172)
+
+[node name="GroundTile187" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4744, 172)
+
+[node name="GroundTile188" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4760, 172)
+
+[node name="GroundTile189" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4776, 172)
+
+[node name="GroundTile190" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4792, 172)
+
+[node name="GroundTile191" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4808, 172)
+
+[node name="GroundTile192" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4824, 172)
+
+[node name="GroundTile193" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4840, 172)
+
+[node name="GroundTile194" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4856, 172)
+
+[node name="GroundTile195" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4872, 172)
+
+[node name="GroundTile196" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4888, 172)
+
+[node name="GroundTile197" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4904, 172)
+
+[node name="GroundTile198" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4920, 172)
+
+[node name="GroundTile199" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4936, 172)
+
+[node name="GroundTile200" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4952, 172)
+
+[node name="GroundTile201" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4968, 172)
+
+[node name="GroundTile202" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(4984, 172)
+
+[node name="GroundTile203" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5000, 172)
+
+[node name="GroundTile204" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5016, 172)
+
+[node name="GroundTile205" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5032, 172)
+
+[node name="GroundTile206" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5048, 172)
+
+[node name="GroundTile207" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5064, 172)
+
+[node name="GroundTile208" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5080, 172)
+
+[node name="GroundTile209" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5096, 172)
+
+[node name="GroundTile210" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5112, 172)
+
+[node name="GroundTile211" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5128, 172)
+
+[node name="GroundTile212" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5144, 172)
+
+[node name="GroundTile213" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5160, 172)
+
+[node name="GroundTile214" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5176, 172)
+
+[node name="GroundTile215" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5192, 172)
+
+[node name="GroundTile216" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5208, 172)
+
+[node name="GroundTile217" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5224, 172)
+
+[node name="GroundTile218" parent="Map/Grounds" instance=ExtResource("6_vqmxw")]
+position = Vector2(5240, 172)
+
+[node name="Roofs" type="Node" parent="Map"]
+
+[node name="GroundTile" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(568, 8)
+
+[node name="GroundTile2" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(584, 8)
+
+[node name="GroundTile3" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(600, 8)
+
+[node name="GroundTile4" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(616, 8)
+
+[node name="GroundTile5" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(632, 8)
+
+[node name="GroundTile6" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(648, 8)
+
+[node name="GroundTile7" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(664, 8)
+
+[node name="GroundTile8" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(680, 8)
+
+[node name="GroundTile9" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(696, 8)
+
+[node name="GroundTile10" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(712, 8)
+
+[node name="GroundTile11" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(728, 8)
+
+[node name="GroundTile12" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(744, 8)
+
+[node name="GroundTile13" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(760, 8)
+
+[node name="GroundTile14" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(776, 8)
+
+[node name="GroundTile15" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(792, 8)
+
+[node name="GroundTile16" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(808, 8)
+
+[node name="GroundTile17" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(824, 8)
+
+[node name="GroundTile18" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(840, 8)
+
+[node name="GroundTile19" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(856, 8)
+
+[node name="GroundTile20" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(872, 8)
+
+[node name="GroundTile21" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(888, 8)
+
+[node name="GroundTile22" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(904, 8)
+
+[node name="GroundTile23" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(920, 8)
+
+[node name="GroundTile24" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(936, 8)
+
+[node name="GroundTile25" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(952, 8)
+
+[node name="GroundTile26" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(968, 8)
+
+[node name="GroundTile27" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(984, 8)
+
+[node name="GroundTile28" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1000, 8)
+
+[node name="GroundTile29" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1016, 8)
+
+[node name="GroundTile30" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1032, 8)
+
+[node name="GroundTile31" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1048, 8)
+
+[node name="GroundTile32" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1064, 8)
+
+[node name="GroundTile33" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1080, 8)
+
+[node name="GroundTile34" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1096, 8)
+
+[node name="GroundTile35" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1112, 8)
+
+[node name="GroundTile36" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1128, 8)
+
+[node name="GroundTile37" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1144, 8)
+
+[node name="GroundTile38" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1160, 8)
+
+[node name="GroundTile39" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1176, 8)
+
+[node name="GroundTile40" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1192, 8)
+
+[node name="GroundTile41" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1208, 8)
+
+[node name="GroundTile42" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1224, 8)
+
+[node name="GroundTile43" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1240, 8)
+
+[node name="GroundTile44" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1256, 8)
+
+[node name="GroundTile45" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1272, 8)
+
+[node name="GroundTile46" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1288, 8)
+
+[node name="GroundTile47" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1304, 8)
+
+[node name="GroundTile48" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1320, 8)
+
+[node name="GroundTile49" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1672, 8)
+
+[node name="GroundTile50" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1688, 8)
+
+[node name="GroundTile51" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1704, 8)
+
+[node name="GroundTile52" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1720, 8)
+
+[node name="GroundTile53" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1736, 8)
+
+[node name="GroundTile54" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1752, 8)
+
+[node name="GroundTile55" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1768, 8)
+
+[node name="GroundTile56" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1784, 8)
+
+[node name="GroundTile57" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1800, 8)
+
+[node name="GroundTile58" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1816, 8)
+
+[node name="GroundTile59" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1832, 8)
+
+[node name="GroundTile60" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1848, 8)
+
+[node name="GroundTile61" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1864, 8)
+
+[node name="GroundTile62" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1880, 8)
+
+[node name="GroundTile63" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1896, 8)
+
+[node name="GroundTile64" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1912, 8)
+
+[node name="GroundTile65" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1928, 8)
+
+[node name="GroundTile66" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1944, 8)
+
+[node name="GroundTile67" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1960, 8)
+
+[node name="GroundTile68" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1976, 8)
+
+[node name="GroundTile69" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(1992, 8)
+
+[node name="GroundTile70" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2008, 8)
+
+[node name="GroundTile71" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2024, 8)
+
+[node name="GroundTile72" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2040, 8)
+
+[node name="GroundTile73" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2056, 8)
+
+[node name="GroundTile74" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2072, 8)
+
+[node name="GroundTile75" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2088, 8)
+
+[node name="GroundTile76" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2104, 8)
+
+[node name="GroundTile77" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2120, 8)
+
+[node name="GroundTile78" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2136, 8)
+
+[node name="GroundTile79" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2152, 8)
+
+[node name="GroundTile80" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2168, 8)
+
+[node name="GroundTile81" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2184, 8)
+
+[node name="GroundTile82" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2200, 8)
+
+[node name="GroundTile83" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2216, 8)
+
+[node name="GroundTile84" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2232, 8)
+
+[node name="GroundTile85" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2248, 8)
+
+[node name="GroundTile86" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2424, 8)
+
+[node name="GroundTile87" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2440, 8)
+
+[node name="GroundTile88" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2456, 8)
+
+[node name="GroundTile89" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2472, 8)
+
+[node name="GroundTile90" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2488, 8)
+
+[node name="GroundTile91" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2504, 8)
+
+[node name="GroundTile92" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2520, 8)
+
+[node name="GroundTile93" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2536, 8)
+
+[node name="GroundTile94" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2552, 8)
+
+[node name="GroundTile95" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2568, 8)
+
+[node name="GroundTile96" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2584, 8)
+
+[node name="GroundTile97" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2600, 8)
+
+[node name="GroundTile98" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2616, 8)
+
+[node name="GroundTile99" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2632, 8)
+
+[node name="GroundTile100" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2648, 8)
+
+[node name="GroundTile101" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2664, 8)
+
+[node name="GroundTile102" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2680, 8)
+
+[node name="GroundTile103" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2696, 8)
+
+[node name="GroundTile104" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2712, 8)
+
+[node name="GroundTile105" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2728, 8)
+
+[node name="GroundTile106" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2744, 8)
+
+[node name="GroundTile107" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2760, 8)
+
+[node name="GroundTile108" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2776, 8)
+
+[node name="GroundTile109" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2792, 8)
+
+[node name="GroundTile110" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2968, 8)
+
+[node name="GroundTile111" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(2984, 8)
+
+[node name="GroundTile112" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3000, 8)
+
+[node name="GroundTile113" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3016, 8)
+
+[node name="GroundTile114" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3032, 8)
+
+[node name="GroundTile115" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3048, 8)
+
+[node name="GroundTile116" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3064, 8)
+
+[node name="GroundTile117" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3080, 8)
+
+[node name="GroundTile118" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3096, 8)
+
+[node name="GroundTile119" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3112, 8)
+
+[node name="GroundTile120" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3128, 8)
+
+[node name="GroundTile121" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3144, 8)
+
+[node name="GroundTile122" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3160, 8)
+
+[node name="GroundTile123" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3176, 8)
+
+[node name="GroundTile124" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3192, 8)
+
+[node name="GroundTile125" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3208, 8)
+
+[node name="GroundTile126" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3224, 8)
+
+[node name="GroundTile127" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3240, 8)
+
+[node name="GroundTile128" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3256, 8)
+
+[node name="GroundTile129" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3272, 8)
+
+[node name="GroundTile130" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3288, 8)
+
+[node name="GroundTile131" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3304, 8)
+
+[node name="GroundTile132" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3320, 8)
+
+[node name="GroundTile133" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3336, 8)
+
+[node name="GroundTile134" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3352, 8)
+
+[node name="GroundTile135" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3368, 8)
+
+[node name="GroundTile136" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3384, 8)
+
+[node name="GroundTile137" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3400, 8)
+
+[node name="GroundTile138" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3416, 8)
+
+[node name="GroundTile139" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3432, 8)
+
+[node name="GroundTile140" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3448, 8)
+
+[node name="GroundTile141" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3464, 8)
+
+[node name="GroundTile142" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3480, 8)
+
+[node name="GroundTile143" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3496, 8)
+
+[node name="GroundTile144" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3512, 8)
+
+[node name="GroundTile145" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3528, 8)
+
+[node name="GroundTile146" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3544, 8)
+
+[node name="GroundTile147" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3560, 8)
+
+[node name="GroundTile148" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3576, 8)
+
+[node name="GroundTile149" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3592, 8)
+
+[node name="GroundTile150" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3608, 8)
+
+[node name="GroundTile151" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3624, 8)
+
+[node name="GroundTile152" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3640, 8)
+
+[node name="GroundTile153" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3656, 8)
+
+[node name="GroundTile154" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3672, 8)
+
+[node name="GroundTile155" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3688, 8)
+
+[node name="GroundTile156" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3704, 8)
+
+[node name="GroundTile157" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3720, 8)
+
+[node name="GroundTile158" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3736, 8)
+
+[node name="GroundTile159" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3752, 8)
+
+[node name="GroundTile160" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3768, 8)
+
+[node name="GroundTile161" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3784, 8)
+
+[node name="GroundTile162" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3800, 8)
+
+[node name="GroundTile163" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3816, 8)
+
+[node name="GroundTile164" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3832, 8)
+
+[node name="GroundTile165" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3848, 8)
+
+[node name="GroundTile166" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3864, 8)
+
+[node name="GroundTile167" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3880, 8)
+
+[node name="GroundTile168" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3896, 8)
+
+[node name="GroundTile169" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3912, 8)
+
+[node name="GroundTile170" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3928, 8)
+
+[node name="GroundTile171" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3944, 8)
+
+[node name="GroundTile172" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3960, 8)
+
+[node name="GroundTile173" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3976, 8)
+
+[node name="GroundTile174" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(3992, 8)
+
+[node name="GroundTile175" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(4008, 8)
+
+[node name="GroundTile176" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(4024, 8)
+
+[node name="GroundTile177" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(4040, 8)
+
+[node name="GroundTile178" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(4056, 8)
+
+[node name="GroundTile179" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(4072, 8)
+
+[node name="GroundTile180" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(4088, 8)
+
+[node name="GroundTile181" parent="Map/Roofs" instance=ExtResource("4_30452")]
+position = Vector2(4104, 8)
+
+[node name="Barrels" type="Node" parent="Map"]
+
+[node name="Barrel" parent="Map/Barrels" instance=ExtResource("6_ob5lg")]
+position = Vector2(377, 149)
+
+[node name="Shells" type="Node" parent="Map"]
+
+[node name="Seashell" parent="Map/Shells" instance=ExtResource("7_xuo3u")]
+position = Vector2(568, 164)
+g_direction = -1
+
+[node name="Seashell4" parent="Map/Shells" instance=ExtResource("7_xuo3u")]
+position = Vector2(1993, 162)
+g_direction = -1
+
+[node name="Seashell5" parent="Map/Shells" instance=ExtResource("7_xuo3u")]
+position = Vector2(2424, 164)
+g_direction = -1
+
+[node name="Seashell6" parent="Map/Shells" instance=ExtResource("7_xuo3u")]
+position = Vector2(2968, 164)
+g_direction = -1
+
+[node name="Seashell2" parent="Map/Shells" instance=ExtResource("7_xuo3u")]
+position = Vector2(1015, 17)
+g_direction = 1
+
+[node name="Seashell3" parent="Map/Shells" instance=ExtResource("7_xuo3u")]
+position = Vector2(1305, 17)
+g_direction = 1
+
+[node name="Seashell7" parent="Map/Shells" instance=ExtResource("7_xuo3u")]
+position = Vector2(2183, 17)
+g_direction = 1
+
+[node name="Seashell8" parent="Map/Shells" instance=ExtResource("7_xuo3u")]
+position = Vector2(2727, 18)
+g_direction = 1
+
+[node name="Seashell9" parent="Map/Shells" instance=ExtResource("7_xuo3u")]
+position = Vector2(4056, 16)
+g_direction = 1
+
+[node name="Bounds" parent="Map" instance=ExtResource("7_fbhbr")]
+
+[node name="Stars" type="Node" parent="Map"]
+
+[node name="Star" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(377, 122)
+
+[node name="Star2" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(337, 155)
+
+[node name="Star3" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(408, 153)
+
+[node name="Star9" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(568, 145)
+
+[node name="Star11" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(608, 85)
+
+[node name="Star4" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(648, 26)
+
+[node name="Star5" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(712, 26)
+
+[node name="Star6" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(840, 26)
+
+[node name="Star7" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(936, 26)
+
+[node name="Star8" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(1416, 153)
+
+[node name="Star12" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(1080, 26)
+
+[node name="Star13" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(1176, 26)
+
+[node name="Star14" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(1305, 36)
+
+[node name="Star15" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(1337, 153)
+
+[node name="Star16" parent="Map/Stars" instance=ExtResource("9_w682m")]
+position = Vector2(1320, 93)
+
+[node name="Backgrounds" type="Node" parent="Map"]
+
+[node name="BottomBG0" type="Sprite2D" parent="Map/Backgrounds"]
+z_index = -1
+position = Vector2(160, 90)
+texture = ExtResource("9_ygiyw")
+offset = Vector2(0, 45)
+script = ExtResource("10_6k5pi")
+
+[node name="BottomBG1" type="Sprite2D" parent="Map/Backgrounds"]
+visible = false
+z_index = -1
+position = Vector2(478, 90)
+texture = ExtResource("11_jcvei")
+offset = Vector2(0, 45)
+script = ExtResource("10_6k5pi")
+
+[node name="BottomBG2" type="Sprite2D" parent="Map/Backgrounds"]
+z_index = -1
+position = Vector2(796, 90)
+texture = ExtResource("12_f2qjs")
+offset = Vector2(0, 45)
+script = ExtResource("10_6k5pi")
+
+[node name="TopBG0" type="Sprite2D" parent="Map/Backgrounds"]
+z_index = -1
+position = Vector2(160, 0)
+texture = ExtResource("12_f2qjs")
+offset = Vector2(0, 45)
+flip_v = true
+script = ExtResource("10_6k5pi")
+
+[node name="TopBG1" type="Sprite2D" parent="Map/Backgrounds"]
+visible = false
+z_index = -1
+position = Vector2(478, 0)
+texture = ExtResource("11_jcvei")
+offset = Vector2(0, 45)
+flip_v = true
+script = ExtResource("10_6k5pi")
+
+[node name="TopBG2" type="Sprite2D" parent="Map/Backgrounds"]
+z_index = -1
+position = Vector2(796, 0)
+texture = ExtResource("9_ygiyw")
+offset = Vector2(0, 45)
+flip_v = true
+script = ExtResource("10_6k5pi")
+
+[node name="Debug" type="Label" parent="."]
+z_index = 1
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PauseMenu" type="Node" parent="."]
+process_mode = 2
+script = ExtResource("5_g6sbg")
+
+[node name="ContinueText" type="Label" parent="PauseMenu"]
+offset_left = 50.0
+offset_top = 60.0
+offset_right = 270.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("10_mhtsq")
+theme_override_font_sizes/font_size = 32
+text = "Press to Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("11_c1f0h")
+
+[node name="ScoreText" type="Label" parent="."]
+z_index = 5
+offset_left = 140.0
+offset_right = 180.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("10_mhtsq")
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("11_51350")
+
+[connection signal="ended" from="." to="PauseMenu" method="ended"]
+[connection signal="jumped" from="." to="Crab" method="jump"]
+[connection signal="scored" from="." to="ScoreText" method="update_score"]
+[connection signal="game_ended" from="Crab" to="." method="_game_ended"]
+[connection signal="score_points" from="Crab" to="." method="_score"]
+[connection signal="paused" from="PauseMenu" to="PauseMenu/ContinueText" method="set_visibility"]

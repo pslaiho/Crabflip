@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://t5t34uhkc6hi"]
+
+[ext_resource type="Texture2D" uid="uid://bj75spdww0wv3" path="res://Sprites/Temps/shell_temp.png" id="1_85by4"]
+[ext_resource type="Script" path="res://Scripts/GameObjects/seashell.gd" id="1_fx3qb"]
+[ext_resource type="Texture2D" uid="uid://bfequl41slwui" path="res://Sprites/shell.png" id="3_tjqct"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpbpo"]
+size = Vector2(32, 12.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddqto"]
+atlas = ExtResource("3_tjqct")
+region = Rect2(0, 4, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01lkg"]
+atlas = ExtResource("3_tjqct")
+region = Rect2(32, 4, 32, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vnrrw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddqto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01lkg")
+}],
+"loop": false,
+"name": &"flip",
+"speed": 32.0
+}]
+
+[node name="Seashell" type="Area2D"]
+z_index = 3
+script = ExtResource("1_fx3qb")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_85by4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.75)
+shape = SubResource("RectangleShape2D_wpbpo")
+
+[node name="AnimSprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.001, 1.001)
+sprite_frames = SubResource("SpriteFrames_vnrrw")
+animation = &"flip"
+offset = Vector2(0, -5.5)
